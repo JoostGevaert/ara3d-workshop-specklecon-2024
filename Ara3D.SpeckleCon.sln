@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.Speckle.Data", "Ara3D.Speckle.Data\Ara3D.Speckle.Data.csproj", "{715D856A-601E-44F0-9E1B-204C8A5A2742}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.Speckle.IfcLoader", "..\ara3d\IFC-toolkit\Ara3D.Speckle.IfcLoader\Ara3D.Speckle.IfcLoader.csproj", "{CFB2F12A-A100-4CF1-B1FC-FF05E0341A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ara3D.SpeckleCon.Tests", "Ara3D.SpeckleCon.Tests\Ara3D.SpeckleCon.Tests.csproj", "{5874AC18-C340-472B-9A9A-E7753359DF14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry", "..\ara3d\Plato.Geometry\Plato.Geometry.CSharp\Plato.Geometry.csproj", "{57E86DCF-D844-4BA4-814C-CA190634DE3C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.Speckle", "..\ara3d\Plato.Geometry\Plato.Geometry.Speckle\Plato.Geometry.Speckle.csproj", "{45A0E176-A0B4-4D47-A031-F39563E483EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.Viewer.Wpf", "..\ara3d\labs\Ara3D.Viewer.Wpf\Ara3D.Viewer.Wpf.csproj", "{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{715D856A-601E-44F0-9E1B-204C8A5A2742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715D856A-601E-44F0-9E1B-204C8A5A2742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715D856A-601E-44F0-9E1B-204C8A5A2742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715D856A-601E-44F0-9E1B-204C8A5A2742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB2F12A-A100-4CF1-B1FC-FF05E0341A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB2F12A-A100-4CF1-B1FC-FF05E0341A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB2F12A-A100-4CF1-B1FC-FF05E0341A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB2F12A-A100-4CF1-B1FC-FF05E0341A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5874AC18-C340-472B-9A9A-E7753359DF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5874AC18-C340-472B-9A9A-E7753359DF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5874AC18-C340-472B-9A9A-E7753359DF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5874AC18-C340-472B-9A9A-E7753359DF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D524EFDC-3C95-4721-899A-0AD95ED95E60}
+	EndGlobalSection
+EndGlobal

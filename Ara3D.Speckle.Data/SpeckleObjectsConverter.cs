@@ -11,7 +11,7 @@ namespace Ara3D.Speckle.Data
     /// This class converts the Speckle API objects to a more navigable and easier to convert format,
     /// called a "SpeckleObject". This conversion is one-way. 
     /// </summary>
-    public static class SpeckleConverter 
+    public static class SpeckleObjectsConverter 
     {
         public static object ToSpeckleObject(this object o, Dictionary<string, SpeckleObject> lookup)
         {

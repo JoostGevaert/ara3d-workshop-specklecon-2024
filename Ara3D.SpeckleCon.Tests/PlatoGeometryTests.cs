@@ -5,7 +5,6 @@ namespace Ara3D.SpeckleCon.Tests
         [Test]
         public static void Test1()
         {
-            // TODO: get the PLY file
         }
     }
 }

@@ -130,7 +130,7 @@ namespace Ara3D.SpeckleCon.Tests
             formData.Add(streamContent, "files", f.GetFileName());
             var request = client.GQLClient.HttpClient
                 .PostAsync(
-                    new Uri($"{client.ServerUrl}api/file/ifc/stream/{projectId}/blob"),
+                    new Uri($"{client.ServerUrl}/api/file/ifc/stream/{projectId}"),
                     formData
                 ).Result;
             request.EnsureSuccessStatusCode();

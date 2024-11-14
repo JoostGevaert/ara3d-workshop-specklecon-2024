@@ -118,7 +118,7 @@ namespace Ara3D.SpeckleCon.Tests
             logger?.Log($"Converting {f} to Speckle");
             var mesh = PlyImporter.LoadMesh(f);
             var scene = new Scene();
-            scene.Root.AddMesh(mesh, null, Colors.CornflowerBlue);
+            scene.Root.AddMesh(mesh, null, Colors.RebeccaPurple);
             var b = scene.ToSpeckle();
             var client = SpeckleUtils.LoginDefaultClient(logger);
             var result = client.PushModel(TestProjectId, f.GetFileName(), b, logger);

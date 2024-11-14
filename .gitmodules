@@ -1,0 +1,3 @@
+[submodule "Plato.Geometry"]
+	path = Plato.Geometry
+	url = https://github.com/ara3d/Plato.Geometry

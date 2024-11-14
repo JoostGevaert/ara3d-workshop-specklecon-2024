@@ -7,13 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.Speckle.Data", "Ara3D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.SpeckleCon.Tests", "Ara3D.SpeckleCon.Tests\Ara3D.SpeckleCon.Tests.csproj", "{5874AC18-C340-472B-9A9A-E7753359DF14}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry", "..\ara3d\Plato.Geometry\Plato.Geometry.CSharp\Plato.Geometry.csproj", "{57E86DCF-D844-4BA4-814C-CA190634DE3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry", "Plato.Geometry\Plato.Geometry.CSharp\Plato.Geometry.csproj", "{97B9FDEE-184E-4E7F-95E3-D92C0C02DB17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.Speckle", "..\ara3d\Plato.Geometry\Plato.Geometry.Speckle\Plato.Geometry.Speckle.csproj", "{45A0E176-A0B4-4D47-A031-F39563E483EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.Assimp", "Plato.Geometry\Plato.Geometry.Assimp\Plato.Geometry.Assimp.csproj", "{EBB229B4-A1AE-400C-A69A-80EEABE56FFB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.Viewer.Wpf", "..\ara3d\labs\Ara3D.Viewer.Wpf\Ara3D.Viewer.Wpf.csproj", "{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.G3Sharp", "Plato.Geometry\Plato.Geometry.G3Sharp\Plato.Geometry.G3Sharp.csproj", "{A4787A91-C382-47A9-82A5-60D0190763F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.G3Sharp", "..\ara3d\Plato.Geometry\Plato.Geometry.G3Sharp\Plato.Geometry.G3Sharp.csproj", "{BF19E95B-D0DD-4CF0-A388-4F145566BDE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.Revit", "Plato.Geometry\Plato.Geometry.Revit\Plato.Geometry.Revit.csproj", "{9CD16758-650C-4D9E-8818-3A03DE9136EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.Speckle", "Plato.Geometry\Plato.Geometry.Speckle\Plato.Geometry.Speckle.csproj", "{56404D2E-4283-47A2-B42A-C292D37E443F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plato.Geometry.WPF", "Plato.Geometry\Plato.Geometry.WPF\Plato.Geometry.WPF.csproj", "{2FE25ACB-75D0-4503-AE42-90ED6C357B9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,22 +33,30 @@ Global
 		{5874AC18-C340-472B-9A9A-E7753359DF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5874AC18-C340-472B-9A9A-E7753359DF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5874AC18-C340-472B-9A9A-E7753359DF14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57E86DCF-D844-4BA4-814C-CA190634DE3C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45A0E176-A0B4-4D47-A031-F39563E483EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C5E1D69-B91C-4F02-931B-6A33D739AC2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF19E95B-D0DD-4CF0-A388-4F145566BDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF19E95B-D0DD-4CF0-A388-4F145566BDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF19E95B-D0DD-4CF0-A388-4F145566BDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF19E95B-D0DD-4CF0-A388-4F145566BDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B9FDEE-184E-4E7F-95E3-D92C0C02DB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B9FDEE-184E-4E7F-95E3-D92C0C02DB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B9FDEE-184E-4E7F-95E3-D92C0C02DB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B9FDEE-184E-4E7F-95E3-D92C0C02DB17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB229B4-A1AE-400C-A69A-80EEABE56FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB229B4-A1AE-400C-A69A-80EEABE56FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB229B4-A1AE-400C-A69A-80EEABE56FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB229B4-A1AE-400C-A69A-80EEABE56FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4787A91-C382-47A9-82A5-60D0190763F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4787A91-C382-47A9-82A5-60D0190763F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4787A91-C382-47A9-82A5-60D0190763F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4787A91-C382-47A9-82A5-60D0190763F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD16758-650C-4D9E-8818-3A03DE9136EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD16758-650C-4D9E-8818-3A03DE9136EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD16758-650C-4D9E-8818-3A03DE9136EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD16758-650C-4D9E-8818-3A03DE9136EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56404D2E-4283-47A2-B42A-C292D37E443F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56404D2E-4283-47A2-B42A-C292D37E443F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56404D2E-4283-47A2-B42A-C292D37E443F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56404D2E-4283-47A2-B42A-C292D37E443F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE25ACB-75D0-4503-AE42-90ED6C357B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE25ACB-75D0-4503-AE42-90ED6C357B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE25ACB-75D0-4503-AE42-90ED6C357B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE25ACB-75D0-4503-AE42-90ED6C357B9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

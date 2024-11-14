@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -20,9 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ara3d\Plato.Geometry\Plato.Geometry.CSharp\Plato.Geometry.csproj" />
-    <ProjectReference Include="..\..\ara3d\Plato.Geometry\Plato.Geometry.Speckle\Plato.Geometry.Speckle.csproj" />
     <ProjectReference Include="..\Ara3D.Speckle.Data\Ara3D.Speckle.Data.csproj" />
+    <ProjectReference Include="..\Plato.Geometry\Plato.Geometry.CSharp\Plato.Geometry.csproj" />
+    <ProjectReference Include="..\Plato.Geometry\Plato.Geometry.Speckle\Plato.Geometry.Speckle.csproj" />
   </ItemGroup>
 
   <ItemGroup>

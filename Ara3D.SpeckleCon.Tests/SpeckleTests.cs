@@ -4,6 +4,7 @@ using Ara3D.Utils;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Newtonsoft.Json;
 using Objects.Geometry;
+using Objects.Other;
 using Plato.DoublePrecision;
 using Plato.Geometry.Graphics;
 using Plato.Geometry.IO;
@@ -116,9 +117,8 @@ namespace Ara3D.SpeckleCon.Tests
             var f = InputFolder.RelativeFile("bunny70k.ply");
             logger?.Log($"Converting {f} to Speckle");
             var mesh = PlyImporter.LoadMesh(f);
-            var material = new Material(Colors.CornflowerBlue);
             var scene = new Scene();
-            scene.Root.AddMesh(mesh, null, material);
+            scene.Root.AddMesh(mesh, null, Colors.CornflowerBlue);
             var b = scene.ToSpeckle();
             var client = SpeckleUtils.LoginDefaultClient(logger);
             var result = client.PushModel(TestProjectId, f.GetFileName(), b, logger);
@@ -176,14 +176,8 @@ namespace Ara3D.SpeckleCon.Tests
 
                 var ifcTypes = tmp.SelectMany(n => n.GetProps().Where(p => p.Key == "ifc_type").Select(p => p.Value))
                     .Distinct().OrderBy(p => p).ToList();
+
                 Console.WriteLine($"Found {ifcTypes.Count} distinct IFC types");
-                foreach (var ifcType in ifcTypes)
-                {
-                    var filteredRoot = scene.Root.Filter(n =>
-                        n.GetProps().Any(kv => kv.Key == "ifc_type" && kv.Value == ifcType));
-                    var totalChildren = filteredRoot.GetSelfAndDescendants().Count();
-                    Console.WriteLine($"{ifcType} has {totalChildren}");
-                }
             }
         }
 
@@ -210,8 +204,31 @@ namespace Ara3D.SpeckleCon.Tests
             return false;
         }
 
+        [Test, Explicit("Update remote project ")]
+        public static void TestTorus()
+        {
+            Integer usegs = 64;
+            Integer vsegs = 32;
+            Vector2D uvFrom = (0, 0);
+            Vector2D uvTo = (1, 0.5);
+            var columns = usegs.LinearSpace.Map(i => uvFrom.X.Lerp(uvTo.X, i));
+            var rows = vsegs.LinearSpace.Map(i => uvFrom.Y.Lerp(uvTo.Y, i));
+            var points = columns.CartesianProduct(rows, (u, v) => new Vector2D(u, v).TorusFunction(1.0, 0.2));
+            var mesh = new QuadGrid3D(points, false, false);
+            
+            var logger = CreateLogger();
+            var scene = new Scene();
+            scene.Root.AddMesh(mesh, null, Colors.Crimson);
+            var b = scene.ToSpeckle();
+            var client = SpeckleUtils.LoginDefaultClient(logger);
+
+            var name = "Torus";
+            var result = client.PushModel(TestProjectId, name, b, logger);
+            logger?.Log($"Pushed {name} to project at {TestProjectUrl} with result {result}");
+        }
+
         
-        [Test]
+        [Test, Explicit("Takes a long time to run")]
         public static void TestClashes()
         {
             var logger = CreateLogger();
@@ -247,7 +264,14 @@ namespace Ara3D.SpeckleCon.Tests
                         if (boundsList[i].Overlaps(boundsList[j]))
                         //if (Clashes(m1.Item1, m2.Item1, true))
                         {
-                            logger?.Log($"Found clash between mesh {i}({m1.Item2.Name}:{m1.Item2.Id}) and mesh {j}({m2.Item2.Name}:{m2.Item2.Id})");
+                            var type1 = m1.Item2.GetProp("ifc_type");
+                            var type2 = m2.Item2.GetProp("ifc_type");
+
+                            logger?.Log($"Found clash between mesh {i}({type1}:{m1.Item2.Id}) and mesh {j}({type2}:{m2.Item2.Id})");
+
+                            var collidingMesh = m1.Item1.Combine(m2.Item1);
+                            var outputFile = OutputFolder.RelativeFile($"clash_{m1.Item2.Id}_{m2.Item2.Id}.obj");
+                            collidingMesh.WriteObj(outputFile);
                         }
                     }
                 }

@@ -94,10 +94,11 @@ namespace Ara3D.Speckle.Data
                 foreach (var mesh in displayMeshList.displayValue)
                     r.Elements.Add(ToSpeckleObject(mesh, lookup));
             
-            var type = b.GetType();
-            r.DotNetType = type.Name;
-            r.SpeckleType = b.speckle_type;
-
+            r.Properties.Add("_speckle_type", b.speckle_type);
+            r.Properties.Add("_applicationId", b.applicationId);
+            r.Properties.Add("_dotNetType", b.GetType().Name);
+            r.Properties.Add("_id", b.id);
+            
             foreach (var kv in b.GetDynamicAndInstanceMembers())
                 r.Properties.Add(kv.Key, ToSpeckleObject(kv.Value, lookup));
 

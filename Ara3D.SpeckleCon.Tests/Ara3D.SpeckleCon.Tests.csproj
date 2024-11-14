@@ -20,6 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ara3d\Plato.Geometry\Plato.Geometry.CSharp\Plato.Geometry.csproj" />
+    <ProjectReference Include="..\..\ara3d\Plato.Geometry\Plato.Geometry.Speckle\Plato.Geometry.Speckle.csproj" />
     <ProjectReference Include="..\Ara3D.Speckle.Data\Ara3D.Speckle.Data.csproj" />
   </ItemGroup>
 
